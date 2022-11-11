@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">TeleSpeed</string>
+    <string name="xposed_description">Speed up your Telegram download.</string>
+    <string name="speed_toast">Download speed boosted by TeleSpeed!</string>
+    <string name="speed_toast_level">By %s, Boost: %s</string>
+    <string name="speed_level">Boost</string>
+    <string name="boost_none">Disabled</string>
+    <string name="boost_average">Enabled</string>
+    <string name="boost_extreme">Extreme</string>
+    <string name="ignore">Ignore</string>
+    <string name="settings">Settings</string>
+    <string name="by">By</string>
+    <string name="not_supported">It seems that you are using an out dated version of LSPosed or LSPosed is not activated, please update LSPosed or try again after activated.</string>
+    <string-array name="xposedscope">
+        <item>org.telegram.messenger</item>
+        <item>org.telegram.messenger.web</item>
+        <item>org.telegram.messenger.beta</item>
+        <item>nekox.messenger</item>
+        <item>com.cool2645.nekolite</item>
+        <item>org.telegram.plus</item>
+        <item>com.iMe.android</item>
+        <item>org.telegram.BifToGram</item>
+        <item>ua.itaysonlab.messenger</item>
+        <item>org.forkclient.messenger.beta</item>
+        <item>org.aka.messenger</item>
+        <item>ellipi.messenger</item>
+    </string-array>
+    <string-array name="boost_level">
+        <item>@string/boost_none</item>
+        <item>@string/boost_average</item>
+        <item>@string/boost_extreme</item>
+    </string-array>
+    <string-array name="boost_value">
+        <item>none</item>
+        <item>average</item>
+        <item>extreme</item>
+    </string-array>
+</resources>

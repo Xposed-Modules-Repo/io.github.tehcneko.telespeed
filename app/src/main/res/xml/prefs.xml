@@ -1,0 +1,24 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/settings">
+        <ListPreference
+            android:key="pref_key_checkbox"
+            android:title="@string/speed_level"
+            android:summary="%s"
+            android:entries="@array/boost_level"
+            android:entryValues="@array/boost_value"
+            android:defaultValue="average" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/by">
+
+        <Preference
+            android:title="Nekogram"
+            android:summary="https://nekogram.app">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://nekogram.app" />
+        </Preference>
+
+    </PreferenceCategory>
+</PreferenceScreen>
