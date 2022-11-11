@@ -11,4 +11,5 @@
     <string name="not_supported">您似乎正在使用过时的 LSPosed 版本或 LSPosed 未激活，请更新 LSPosed 或者激活后再试。</string>
     <string name="settings">设置</string>
     <string name="by">源于</string>
+    <string name="unsupported">不支持的 Telegram 版本。</string>
 </resources>
