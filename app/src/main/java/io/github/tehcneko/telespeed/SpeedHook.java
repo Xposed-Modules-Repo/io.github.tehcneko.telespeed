@@ -67,7 +67,7 @@ public class SpeedHook implements IXposedHookLoadPackage, IXposedHookZygoteInit 
                     if (!BOOST_NONE.equals(speed)) {
                         try {
                             var fileSize = XposedHelpers.getLongField(param.thisObject, "totalBytesCount");
-                            if (fileSize >= 1.2 * 1024 * 1024) {
+                            if (fileSize > 15 * 1024 * 1024) {
                                 String speedString;
                                 if (BOOST_AVERAGE.equals(speed)) {
                                     speedString = res.getString(R.string.boost_average);
