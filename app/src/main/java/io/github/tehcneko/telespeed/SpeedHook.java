@@ -1,5 +1,6 @@
 package io.github.tehcneko.telespeed;
 
+import android.app.Activity;
 import android.app.AndroidAppHelper;
 import android.content.res.XModuleResources;
 import android.os.Handler;
@@ -33,8 +34,10 @@ public class SpeedHook implements IXposedHookLoadPackage, IXposedHookZygoteInit 
 
     @Override
     public void handleLoadPackage(XC_LoadPackage.LoadPackageParam loadPackageParam) {
+        if (BuildConfig.APPLICATION_ID.equals(loadPackageParam.packageName) || loadPackageParam.packageName.startsWith("com.miui.")) {
+            return;
+        }
         try {
-
             XposedHelpers.findAndHookMethod("org.telegram.messenger.FileLoadOperation", loadPackageParam.classLoader, "updateParams", new XC_MethodHook() {
                 @Override
                 protected void afterHookedMethod(MethodHookParam param) throws Throwable {
@@ -99,6 +102,12 @@ public class SpeedHook implements IXposedHookLoadPackage, IXposedHookZygoteInit 
             });
         } catch (Throwable t) {
             XposedBridge.log(t);
+            XposedHelpers.findAndHookMethod(Activity.class, "onResume", new XC_MethodHook() {
+                @Override
+                protected void afterHookedMethod(MethodHookParam param) {
+                    Toast.makeText((Activity) param.thisObject, "TeleSpeed: " + res.getString(R.string.unsupported), Toast.LENGTH_LONG).show();
+                }
+            });
         }
     }
 }

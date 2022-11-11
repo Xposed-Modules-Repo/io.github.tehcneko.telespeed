@@ -2,7 +2,7 @@
 
     <PreferenceCategory android:title="@string/settings">
         <ListPreference
-            android:key="pref_key_checkbox"
+            android:key="speed"
             android:title="@string/speed_level"
             android:summary="%s"
             android:entries="@array/boost_level"

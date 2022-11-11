@@ -10,8 +10,8 @@ android {
         applicationId "io.github.tehcneko.telespeed"
         minSdkVersion 23
         targetSdkVersion 33
-        versionCode 1
-        versionName "1.0.0"
+        versionCode 5
+        versionName "1.0.4"
     }
 
     buildTypes {
